@@ -13,19 +13,22 @@ build:
   # Seem primesieve is encountering hangs on Windows with Python 2.7.
   # So, neither primesieve nor these Python bindings are built in that case.
   skip: true  # [win and py2k]
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
+  features:
+    - vc10              # [win and py34]
+    - vc14              # [win and py35]
 
 requirements:
   build:
-    - gcc     # [osx]
+    - gcc               # [unix]
     - python
     - cython
     - numpy x.x
     - primesieve
 
   run:
-    - libgcc  # [osx]
+    - libgcc            # [unix]
     - python
     - numpy x.x
     - primesieve
