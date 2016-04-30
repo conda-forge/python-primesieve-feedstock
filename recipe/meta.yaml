@@ -21,14 +21,14 @@ build:
 
 requirements:
   build:
-    - gcc     # [osx]
+    - gcc     # [unix]
     - python
     - cython
     - numpy x.x
     - primesieve
 
   run:
-    - libgcc  # [osx]
+    - libgcc  # [unix]
     - python
     - numpy x.x
     - primesieve
