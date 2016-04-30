@@ -15,6 +15,9 @@ build:
   skip: true  # [win and py2k]
   number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
+  features:
+    - vc10              # [win and py34]
+    - vc14              # [win and py35]
 
 requirements:
   build:
