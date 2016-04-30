@@ -5,7 +5,7 @@ Home: https://github.com/hickford/primesieve-python
 
 Package license: MIT
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: Fast prime number generator. Python bindings for primesieve C/C++ library
 
