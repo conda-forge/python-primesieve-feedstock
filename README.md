@@ -11,6 +11,18 @@ Summary: Fast prime number generator. Python bindings for primesieve C/C++ libra
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/python-primesieve-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/python-primesieve-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/python-primesieve-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/python-primesieve-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/python-primesieve-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/python-primesieve-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/python-primesieve/badges/version.svg)](https://anaconda.org/conda-forge/python-primesieve)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/python-primesieve/badges/downloads.svg)](https://anaconda.org/conda-forge/python-primesieve)
+
 Installing python-primesieve
 ============================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `python-primesieve` available on y
 ```
 conda search python-primesieve --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/python-primesieve-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/python-primesieve-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/python-primesieve-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/python-primesieve-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/python-primesieve-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/python-primesieve-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/python-primesieve/badges/version.svg)](https://anaconda.org/conda-forge/python-primesieve)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/python-primesieve/badges/downloads.svg)](https://anaconda.org/conda-forge/python-primesieve)
 
 
 Updating python-primesieve-feedstock
