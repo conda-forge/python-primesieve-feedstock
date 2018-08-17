@@ -13,11 +13,15 @@ build:
   # Seem primesieve is encountering hangs on Windows with Python 2.7.
   # So, neither primesieve nor these Python bindings are built in that case.
   skip: true  # [win and py2k]
-  number: 4
+  number: 5
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
+    - {{ pin_compatible('numpy') }}
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
@@ -29,7 +33,6 @@ requirements:
 
   run:
     - python
-    - {{ pin_compatible('numpy') }}
     - primesieve
 
 test:
