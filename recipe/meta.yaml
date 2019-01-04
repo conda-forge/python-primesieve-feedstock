@@ -23,7 +23,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-  build:
+  host:
     - python
     - pip
     - cython
