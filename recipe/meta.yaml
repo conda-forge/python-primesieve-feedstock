@@ -28,6 +28,7 @@ requirements:
     - python
     - pip
     - cython
+    - numpy
   run:
     - libgcc            # [unix]
     - python
@@ -37,8 +38,10 @@ requirements:
 test:
   imports:
     - primesieve
+    - primesieve.numpy
   commands:
     - python -c "import primesieve; assert primesieve.nth_prime(1) == 2"
+    - python -c "import primesieve.numpy; assert primesieve.numpy.nth_prime(1) == 2"
 
 about:
   home: https://github.com/hickford/primesieve-python
