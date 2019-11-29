@@ -6,7 +6,6 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: da7d5f13e0c5949ef598642aa39fcd9aa84487b116d8ea7d5e3a47a6ed2936cb
 
@@ -14,25 +13,17 @@ build:
   skip: true  # [py<35]
   number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
-  features:
-    - vc14              # [win]
 
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - python
-    - setuptools
-    - cython
-    - numpy
   host:
     - python
     - pip
     - cython
     - numpy
   run:
-    - libgcc            # [unix]
     - python
-    - cython
     - {{ pin_compatible('numpy') }}
 
 test:
