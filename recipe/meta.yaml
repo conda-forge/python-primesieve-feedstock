@@ -1,52 +1,50 @@
-{% set version = "1.0.0" %}
+{% set name = "primesieve" %}
+{% set version = "2.0.0" %}
 
 package:
-  name: python-primesieve
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: primesieve-{{ version }}.zip
-  url: https://pypi.python.org/packages/source/p/primesieve/primesieve-{{ version }}.zip
-  md5: 37458cd8ca2757e17fd0446c395fc87b
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: da7d5f13e0c5949ef598642aa39fcd9aa84487b116d8ea7d5e3a47a6ed2936cb
 
 build:
-  # Seem primesieve is encountering hangs on Windows with Python 2.7.
-  # So, neither primesieve nor these Python bindings are built in that case.
-  skip: true  # [win and py2k]
-  number: 3
-  script: python setup.py install --single-version-externally-managed --record record.txt
-  features:
-    - vc10              # [win and py34]
-    - vc14              # [win and py35]
+  skip: true  # [py<35]
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   build:
-    - gcc               # [unix]
+    - {{ compiler('cxx') }}
+  host:
     - python
-    - setuptools
+    - pip
     - cython
-    - numpy x.x
-    - primesieve
-
+    - numpy
   run:
-    - libgcc            # [unix]
     - python
-    - numpy x.x
-    - primesieve
+    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
     - primesieve
-
+    - primesieve.numpy
   commands:
     - python -c "import primesieve; assert primesieve.nth_prime(1) == 2"
+    - python -c "import primesieve.numpy; assert primesieve.numpy.n_primes(1)[0] == 2"
 
 about:
   home: https://github.com/hickford/primesieve-python
   license: MIT
-  summary: Fast prime number generator. Python bindings for primesieve C/C++ library
+  license_family: MIT
+  license_file: LICENSE
+  summary: Fast prime number generator. Python bindings for primesieve C/C++ library.
+  description: |
+    Python bindings for the primesieve C++ library.  Generates primes orders of magnitude faster than any pure Python code!
 
 extra:
   recipe-maintainers:
     - jakirkham
     - kimwalisch
+    - brl0
