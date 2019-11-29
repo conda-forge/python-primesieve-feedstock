@@ -11,24 +11,25 @@ Feedstock license: BSD 3-Clause
 
 Primesieve library license: BSD 2-Clause
 
-Summary: Fast prime number generator. Python bindings for [primesieve](https://github.com/kimwalisch/primesieve) C/C++ library.
+Summary
+-------
+Fast prime number generator. Python bindings for [primesieve](https://github.com/kimwalisch/primesieve) C/C++ library.
 
 Generates primes orders of magnitude faster than any pure Python code!
 
 Current build status
-====================
-
+-----------------------
 [![Build Status](https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-primesieve-feedstock?branchName=master)](https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4672&branchName=master)
 
 Current release info
-====================
+--------------------
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-python--primesieve-green.svg)](https://anaconda.org/conda-forge/python-primesieve) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/python-primesieve.svg)](https://anaconda.org/conda-forge/python-primesieve) | [![Conda Version](https://img.shields.io/github/v/release/hickford/primesieve-python.svg)](https://anaconda.org/conda-forge/python-primesieve) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/python-primesieve.svg)](https://anaconda.org/conda-forge/python-primesieve) |
 
 Installing python-primesieve
-=====================
+---------------------
 
 Installing `python-primesieve` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
@@ -50,7 +51,7 @@ conda search python-primesieve --channel conda-forge
 
 
 About conda-forge
-=================
+-----------------
 
 [![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
 
@@ -75,7 +76,7 @@ this feedstock's supporting files (e.g. the CI configuration files) with ``conda
 For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
-===========
+-----------
 
 **feedstock** - the conda recipe (raw material), supporting scripts and CI configuration.
 
@@ -88,7 +89,7 @@ Terminology
 
 
 Updating python-primesieve-feedstock
-=============================
+-----------------------------
 
 If you would like to improve the primesieve recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
@@ -110,7 +111,7 @@ In order to produce a uniquely identifiable distribution:
    back to 0.
 
 Feedstock Maintainers
-=====================
+---------------------
 
 * [@brl0](https://github.com/brl0/)
 * [@jakirkham](https://github.com/jakirkham/)
