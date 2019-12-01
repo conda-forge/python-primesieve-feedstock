@@ -1,133 +1,35 @@
 About python-primesieve
-=======================
+================
 
 Home: https://github.com/hickford/primesieve-python
+
+PyPI: https://pypi.org/project/primesieve/
 
 Package license: MIT
 
 Feedstock license: BSD 3-Clause
 
-Summary: Fast prime number generator. Python bindings for primesieve C/C++ library
+Primesieve library license: BSD 2-Clause
 
+Summary
+-------
+Fast prime number generator. Python bindings for [primesieve](https://github.com/kimwalisch/primesieve) C/C++ library.
 
+Generates primes orders of magnitude faster than any pure Python code!
 
 Current build status
-====================
-
-
-<table>
-    
-  <tr>
-    <td>Azure</td>
-    <td>
-      <details>
-        <summary>
-          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4672&branchName=master">
-            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-primesieve-feedstock?branchName=master">
-          </a>
-        </summary>
-        <table>
-          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
-          <tbody><tr>
-              <td>linux_python2.7</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4672&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-primesieve-feedstock?branchName=master&jobName=linux&configuration=linux_python2.7" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_python3.6</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4672&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-primesieve-feedstock?branchName=master&jobName=linux&configuration=linux_python3.6" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_python3.7</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4672&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-primesieve-feedstock?branchName=master&jobName=linux&configuration=linux_python3.7" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_python3.8</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4672&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-primesieve-feedstock?branchName=master&jobName=linux&configuration=linux_python3.8" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_python2.7</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4672&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-primesieve-feedstock?branchName=master&jobName=osx&configuration=osx_python2.7" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_python3.6</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4672&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-primesieve-feedstock?branchName=master&jobName=osx&configuration=osx_python3.6" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_python3.7</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4672&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-primesieve-feedstock?branchName=master&jobName=osx&configuration=osx_python3.7" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_python3.8</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4672&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-primesieve-feedstock?branchName=master&jobName=osx&configuration=osx_python3.8" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_python3.6</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4672&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-primesieve-feedstock?branchName=master&jobName=win&configuration=win_python3.6" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_python3.7</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4672&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-primesieve-feedstock?branchName=master&jobName=win&configuration=win_python3.7" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_python3.8</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4672&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-primesieve-feedstock?branchName=master&jobName=win&configuration=win_python3.8" alt="variant">
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </details>
-    </td>
-  </tr>
-  <tr>
-    <td>Linux_ppc64le</td>
-    <td>
-      <img src="https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg" alt="ppc64le disabled">
-    </td>
-  </tr>
-</table>
+-----------------------
+[![Build Status](https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/python-primesieve-feedstock?branchName=master)](https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4672&branchName=master)
 
 Current release info
-====================
+--------------------
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-python--primesieve-green.svg)](https://anaconda.org/conda-forge/python-primesieve) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/python-primesieve.svg)](https://anaconda.org/conda-forge/python-primesieve) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/python-primesieve.svg)](https://anaconda.org/conda-forge/python-primesieve) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/python-primesieve.svg)](https://anaconda.org/conda-forge/python-primesieve) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-python--primesieve-green.svg)](https://anaconda.org/conda-forge/python-primesieve) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/python-primesieve.svg)](https://anaconda.org/conda-forge/python-primesieve) | [![Conda Version](https://img.shields.io/github/v/release/hickford/primesieve-python.svg)](https://anaconda.org/conda-forge/python-primesieve) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/python-primesieve.svg)](https://anaconda.org/conda-forge/python-primesieve) |
 
 Installing python-primesieve
-============================
+---------------------
 
 Installing `python-primesieve` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
@@ -135,13 +37,13 @@ Installing `python-primesieve` from the `conda-forge` channel can be achieved by
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `python-primesieve` can be installed with:
+Once the `conda-forge` channel has been enabled, `primesieve` can be installed with:
 
 ```
 conda install python-primesieve
 ```
 
-It is possible to list all of the versions of `python-primesieve` available on your platform with:
+It is possible to list all of the versions of `primesieve` available on your platform with:
 
 ```
 conda search python-primesieve --channel conda-forge
@@ -149,7 +51,9 @@ conda search python-primesieve --channel conda-forge
 
 
 About conda-forge
-=================
+-----------------
+
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
 
 [![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
 
@@ -174,7 +78,7 @@ this feedstock's supporting files (e.g. the CI configuration files) with ``conda
 For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
-===========
+-----------
 
 **feedstock** - the conda recipe (raw material), supporting scripts and CI configuration.
 
@@ -187,16 +91,16 @@ Terminology
 
 
 Updating python-primesieve-feedstock
-====================================
+-----------------------------
 
-If you would like to improve the python-primesieve recipe or build a new
+If you would like to improve the primesieve recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/python-primesieve-feedstock are
+Note that all branches in the conda-forge/primesieve-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
@@ -209,8 +113,8 @@ In order to produce a uniquely identifiable distribution:
    back to 0.
 
 Feedstock Maintainers
-=====================
+---------------------
 
+* [@brl0](https://github.com/brl0/)
 * [@jakirkham](https://github.com/jakirkham/)
 * [@kimwalisch](https://github.com/kimwalisch/)
-
