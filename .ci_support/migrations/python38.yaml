@@ -27,7 +27,7 @@ c_compiler:
   - gcc                        # [ppc64le]
   - gcc                        # [armv7l]
 
-  - vs2008                     # [win]
+  - vs2015                     # [win]
   - vs2015                     # [win]
   - vs2015                     # [win]
   - vs2015                     # [win]
@@ -43,13 +43,13 @@ cxx_compiler:
   - gxx                        # [ppc64le]
   - gxx                        # [armv7l]
 
-  - vs2008                     # [win]
+  - vs2015                     # [win]
   - vs2015                     # [win]
   - vs2015                     # [win]
   - vs2015                     # [win]
 
 vc:                    # [win]
-  - 9                  # [win]
+  - 14                 # [win]
   - 14                 # [win]
   - 14                 # [win]
   - 14                 # [win]
