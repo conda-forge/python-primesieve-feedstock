@@ -1,7 +1,7 @@
 About python-primesieve
 ================
 
-Home: https://github.com/hickford/primesieve-python
+Home: https://github.com/kimwalisch/primesieve-python
 
 PyPI: https://pypi.org/project/primesieve/
 
