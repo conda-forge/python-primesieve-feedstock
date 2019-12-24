@@ -1,4 +1,5 @@
-{% set name = "primesieve" %}
+{% set name = "python-primesieve" %}
+{% set pypiname = "primesieve" %}
 {% set version = "2.1.0" %}
 
 package:
@@ -6,12 +7,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ pypiname[0] }}/{{ pypiname }}/{{ pypiname }}-{{ version }}.tar.gz
   sha256: 7eecd070f8bce92c589abdb01e70c3dedef4e9301ba17c6911c4a27e5cb1a9f3
 
 build:
   skip: true  # [py<35]
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
@@ -35,13 +36,14 @@ test:
     - python -c "import primesieve.numpy; assert primesieve.numpy.n_primes(1)[0] == 2"
 
 about:
-  home: https://github.com/hickford/primesieve-python
+  home: https://github.com/kimwalisch/primesieve-python
   license: MIT
   license_family: MIT
   license_file: LICENSE
   summary: Fast prime number generator. Python bindings for primesieve C/C++ library.
   description: |
     Python bindings for the primesieve C++ library.  Generates primes orders of magnitude faster than any pure Python code!
+    Primesieve library license: BSD 2-Clause
 
 extra:
   recipe-maintainers:
