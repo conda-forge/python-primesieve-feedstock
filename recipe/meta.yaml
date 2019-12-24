@@ -44,6 +44,7 @@ about:
   description: |
     Python bindings for the primesieve C++ library.  Generates primes orders of magnitude faster than any pure Python code!
     Primesieve library license: BSD 2-Clause
+    Primesieve library website: https://github.com/kimwalisch/primesieve
 
 extra:
   recipe-maintainers:
