@@ -1,6 +1,6 @@
 {% set name = "python-primesieve" %}
 {% set pypiname = "primesieve" %}
-{% set version = "2.3.0" %}
+{% set version = "2.3.4" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ pypiname[0] }}/{{ pypiname }}/{{ pypiname }}-{{ version }}.tar.gz
-  sha256: 948d9d9502cb45077834892c05d7ac2678834efeca0d39f328715591b27ab3d5
+  sha256: 0474039c9420aab15d56a4196eef3b6d363c7d64b1efa746813f434b23896610
 
 build:
   skip: true  # [py<35]
@@ -18,6 +18,7 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
