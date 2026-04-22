@@ -7,17 +7,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ pypiname[0] }}/{{ pypiname }}/{{ pypiname }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ pypiname[0] }}/{{ pypiname }}/{{ pypiname }}-{{ version }}.tar.gz
   sha256: 948d9d9502cb45077834892c05d7ac2678834efeca0d39f328715591b27ab3d5
 
 build:
   skip: true  # [py<35]
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
